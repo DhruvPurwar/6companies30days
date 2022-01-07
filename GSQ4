@@ -1,0 +1,45 @@
+ 
+
+string encode(string src)
+{     
+  //Your code here 
+  string ans="";
+  int cnt=1;
+  char f=src[0];
+  for(int i=1;i<src.size();i++){
+      if(src[i]==src[i-1])cnt++;
+      else{
+          ans+=f;
+          ans+=to_string(cnt);
+          cnt=1;
+          f=src[i];
+      }
+  }
+   ans+=f;
+          ans+=to_string(cnt);
+          return ans;
+  
+}     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
